@@ -55,3 +55,9 @@ include/darknet/
 uselib
 uselib_track
 darknet
+
+# Keane
+cmake-build-debug
+.idea
+*.weights
+*.jpg
