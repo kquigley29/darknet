@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
+add_compile_definitions(DARKNET="$ENV{DARKNET}")
+
 set(Darknet_MAJOR_VERSION 0)
 set(Darknet_MINOR_VERSION 2)
 set(Darknet_PATCH_VERSION 5)
@@ -15,8 +17,8 @@ option(MANUALLY_EXPORT_TRACK_OPTFLOW "Manually export the TRACK_OPTFLOW=1 define
 option(ENABLE_OPENCV "Enable OpenCV integration" ON)
 option(ENABLE_CUDA "Enable CUDA support" ON)
 option(ENABLE_CUDNN "Enable CUDNN" ON)
-option(ENABLE_CUDNN_HALF "Enable CUDNN Half precision" ON)
-option(ENABLE_ZED_CAMERA "Enable ZED Camera support" ON)
+option(ENABLE_CUDNN_HALF "Enable CUDNN Half precision" OFF)
+option(ENABLE_ZED_CAMERA "Enable ZED Camera support" OFF)
 option(ENABLE_VCPKG_INTEGRATION "Enable VCPKG integration" ON)
 
 if(ENABLE_VCPKG_INTEGRATION AND DEFINED ENV{VCPKG_ROOT} AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
