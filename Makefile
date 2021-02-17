@@ -1,5 +1,5 @@
 GPU=1
-CUDNN=1
+CUDNN=0
 CUDNN_HALF=0
 OPENCV=1
 AVX=1
@@ -71,7 +71,7 @@ NVCC=nvcc
 OPTS=-Ofast
 LDFLAGS= -lm -pthread
 COMMON= -Iinclude/ -I3rdparty/stb/include
-CFLAGS=-Wall -Wfatal-errors -Wno-unused-result -Wno-unknown-pragmas -fPIC
+CFLAGS=-Wall -Wfatal-errors -Wno-unused-result -Wno-unknown-pragmas -fPIC -DDARKNET='"$(echo $DARKNET)"'
 
 ifeq ($(DEBUG), 1)
 #OPTS= -O0 -g

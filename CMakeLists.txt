@@ -17,7 +17,7 @@ option(MANUALLY_EXPORT_TRACK_OPTFLOW "Manually export the TRACK_OPTFLOW=1 define
 option(ENABLE_OPENCV "Enable OpenCV integration" ON)
 option(ENABLE_CUDA "Enable CUDA support" ON)
 option(ENABLE_CUDNN "Enable CUDNN" ON)
-option(ENABLE_CUDNN_HALF "Enable CUDNN Half precision" OFF)
+option(ENABLE_CUDNN_HALF "Enable CUDNN Half precision" ON)
 option(ENABLE_ZED_CAMERA "Enable ZED Camera support" OFF)
 option(ENABLE_VCPKG_INTEGRATION "Enable VCPKG integration" ON)
 
